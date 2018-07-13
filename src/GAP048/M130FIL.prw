@@ -37,7 +37,7 @@ Static Function MrkLegenda()
 
 	aAdd(aBrowse,{ .T.,  LoadBitmap(GetResources(), "ENABLE"     ) , "Solicitacao Pendente"     , 'C1_QUJE==0.And.C1_COTACAO==Space(Len(C1_COTACAO)).And.C1_APROV$" ,L"'   } )
 	aAdd(aBrowse,{ .T.,  LoadBitmap(GetResources(), "DISABLE"    ) , "Solicitacao Totalmente"   , 'C1_QUJE==C1_QUANT'                                                      } )
-	aAdd(aBrowse,{ .T.,  LoadBitmap(GetResources(), "BR_AMARELO" ) , "Solicitacao Parcialmente" , 'C1_QUJE>0'                                                              } )
+	aAdd(aBrowse,{ .T.,  LoadBitmap(GetResources(), "BR_AMARELO" ) , "Solicitacao Parcialmente" , 'C1_QUJE>0 AND C1_QUJE==C1_QUANT'                                                              } )
 	aAdd(aBrowse,{ .T.,  LoadBitmap(GetResources(), "BR_AZUL"    ) , "Solicitacao em Processo"  , 'C1_QUJE==0.And.C1_COTACAO<>Space(Len(C1_COTACAO)).And. C1_IMPORT <>"S"' } )
 	aAdd(aBrowse,{ .T.,  LoadBitmap(GetResources(), "BR_PRETO"   ) , "Elim. por Residuo"        , '!Empty(C1_RESIDUO)'                                                     } )
 	aAdd(aBrowse,{ .T.,  LoadBitmap(GetResources(), "BR_CINZA"   ) , "Solicitacäo Bloqueada"    , 'C1_QUJE==0.And.C1_COTACAO==Space(Len(C1_COTACAO)).And.C1_APROV="B"'     } )
